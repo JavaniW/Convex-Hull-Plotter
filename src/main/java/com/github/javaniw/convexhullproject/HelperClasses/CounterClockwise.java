@@ -1,4 +1,4 @@
-package com.github.javaniw.convexhullproject.ConvexHull.HelperClasses;
+package com.github.javaniw.convexhullproject.HelperClasses;
 
 import java.util.Collections;
 import java.util.Comparator;
@@ -60,8 +60,6 @@ public class CounterClockwise {
 
              if (angleOfPoint2 < 0)
                  angleOfPoint2 += 360;
-
-//
 
 //             sorts points in counterclockwise order. Points of the same angle size will be sorted in order
 //             they appear in list

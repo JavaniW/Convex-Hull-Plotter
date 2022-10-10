@@ -1,7 +1,6 @@
-package com.github.javaniw.convexhullproject.ConvexHull.Test;
+package com.github.javaniw.convexhullproject.Test;
 
 import com.github.javaniw.convexhullproject.ConvexHull.BruteForceAlgo.BruteForceConvexHull;
-//import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;

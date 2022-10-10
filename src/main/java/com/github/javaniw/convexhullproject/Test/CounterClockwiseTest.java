@@ -1,7 +1,7 @@
-package com.github.javaniw.convexhullproject.ConvexHull.Test;
+package com.github.javaniw.convexhullproject.Test;
 
-import com.github.javaniw.convexhullproject.ConvexHull.HelperClasses.CounterClockwise;
-//import org.junit.jupiter.api.Test;
+//import com.github.javaniw.convexhullproject.ConvexHull.ConvexHull.HelperClasses.CounterClockwise;
+import com.github.javaniw.convexhullproject.HelperClasses.CounterClockwise;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;

@@ -1,11 +1,12 @@
 package com.github.javaniw.convexhullproject.ConvexHull.BruteForceAlgo;
 
-import com.github.javaniw.convexhullproject.ConvexHull.HelperClasses.CounterClockwise;
+import com.github.javaniw.convexhullproject.ConvexHull.ConvexHull;
+import com.github.javaniw.convexhullproject.HelperClasses.CounterClockwise;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class BruteForceConvexHull {
+public class BruteForceConvexHull extends ConvexHull {
 
     /**
      * Returns the convex hull of a convex set. The hull will be specified by the points that are connected
@@ -15,6 +16,9 @@ public class BruteForceConvexHull {
      * @return a list of points of the convex hull in counterclockwise order
      */
     public static List<Double []> findConvexHull(List<Double[]> listOfPoints) {
+        if (listOfPoints.size() <= 3) {
+            return listOfPoints;
+        }
 //        initialize list that will contain the points that are a part of the convex hull of the set
         List<Double[]> convexHullPoints = new ArrayList<>();
 

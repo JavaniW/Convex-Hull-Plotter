@@ -1,4 +1,4 @@
-package com.github.javaniw.convexhullproject.ConvexHull.HelperClasses;
+package com.github.javaniw.convexhullproject.HelperClasses;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -7,7 +7,13 @@ import java.util.List;
 public class GeneratePoints {
     private static DecimalFormat df = new DecimalFormat("0.00");
 
-//
+    /**
+     *
+     * @param numOfPoints
+     * @param min
+     * @param max
+     * @return
+     */
     public static List<Double []> generate(int numOfPoints, int min, int max) {
         List<Double []> listOfPoints = new ArrayList<>();
         for (int i = 0; i < numOfPoints; i++) {
