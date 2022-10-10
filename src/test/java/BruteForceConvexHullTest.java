@@ -1,5 +1,3 @@
-package com.github.javaniw.convexhullproject.Test;
-
 import com.github.javaniw.convexhullproject.ConvexHull.BruteForceAlgo.BruteForceConvexHull;
 
 import java.util.ArrayList;
