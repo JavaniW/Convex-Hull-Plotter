@@ -2,7 +2,7 @@ package com.github.javaniw.convexhullproject;
 
 import com.github.javaniw.convexhullproject.ConvexHull.ConvexHull;
 import com.github.javaniw.convexhullproject.HelperClasses.GeneratePoints;
-import com.github.javaniw.convexhullproject.HelperClasses.Timeout;
+//import com.github.javaniw.convexhullproject.HelperClasses.Timeout;
 import javafx.application.Application;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;

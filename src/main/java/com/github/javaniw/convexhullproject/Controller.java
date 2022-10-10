@@ -1,6 +1,6 @@
 package com.github.javaniw.convexhullproject;
 
-import com.github.javaniw.convexhullproject.ConvexHull.BruteForceAlgo.BruteForceConvexHull;
+import com.github.javaniw.convexhullproject.BruteForceAlgo.BruteForceConvexHull;
 import javafx.event.EventHandler;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;

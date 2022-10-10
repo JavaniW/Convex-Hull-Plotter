@@ -1,4 +1,4 @@
-import com.github.javaniw.convexhullproject.ConvexHull.BruteForceAlgo.BruteForceConvexHull;
+import com.github.javaniw.convexhullproject.BruteForceAlgo.BruteForceConvexHull;
 
 import java.util.ArrayList;
 import java.util.List;
