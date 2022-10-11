@@ -8,10 +8,13 @@ public class Quickhull {
     public static List<Point> quickhull(List<Point> listOfPoints) {
         List<Point> convexhull = new ArrayList<>();
         Collections.sort(listOfPoints, new Pointcompartive());
+
         Point a = listOfPoints.get(0);
         Point b = listOfPoints.get(listOfPoints.size() - 1);
+
         convexhull.add(a);
         convexhull.add(b);
+
         List<Point> s1 = new ArrayList<Point>();
         List<Point> s2 = new ArrayList<Point>();
 //Segment AB divides the remaining (n − 2) points into 2 groups
