@@ -1,6 +1,6 @@
-package com.github.javaniw.convexhullproject;
+package com.github.javaniw.convexhullproject.QuickHullAlgorithm;
 
-import com.github.javaniw.convexhullproject.QuickHullAlgo.Point;
+import com.github.javaniw.convexhullproject.QuickHullApplication;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -8,10 +8,10 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class JavaniQuickHullTest {
+class QuickHullTest {
 
     @Test
-    void findConvexHull() {
+    void quickHull() {
         List<Point> points = new ArrayList<>();
         points.add(new Point (1.0, 1.0));
         points.add(new Point(1.0, 6.0));
@@ -24,6 +24,14 @@ class JavaniQuickHullTest {
         points.add(new Point(4.0, 4.0));
         points.add(new Point(4.0, 6.0));
 
-        System.out.println(JavaniQuickHull.findConvexHull(points).toString());
+        List<Point> convexHull = QuickHull.quickHull(points);
+        for (Point p : convexHull) {
+            System.out.println("(" + p.x + ", " + p.y + ")");
+        }
+
+    }
+
+    @Test
+    void direction() {
     }
 }

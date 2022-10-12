@@ -1,3 +1,5 @@
+package com.github.javaniw.convexhullproject.QuickHullAlgorithm;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,7 +25,7 @@ public class FindHull
     }
 
 
-    public static void findhull(List<Point> Sk, Point p, Point q) {
+    public static void findHull(List<Point> Sk, Point p, Point q) {
         // checks if the arralist of sk is empty
         if (Sk.isEmpty()) {
             return;
@@ -31,7 +33,7 @@ public class FindHull
         // establishes c to the furthest point by having equal what is returned from the furthestPoint method
         Point c = furthestPoint(Sk,p,q);
         // c is then added back into the convexhull in the quickhull class
-        Quickhull.convexhull.add(c);
+        QuickHull.convexHull.add(c);
         // The arraylists of s1 and s2 are established
         List<Point> s1 = new ArrayList<Point>();
         List<Point> s2 = new ArrayList<Point>();
@@ -39,14 +41,14 @@ public class FindHull
         for (Point i : Sk) {
             if(i.equals(p) || i.equals(q))
                 continue;
-            if (Quickhull.direction(p, c, i) > 0) {
+            if (QuickHull.direction(p, c, i) > 0) {
                 s1.add(i);
-            } else if (Quickhull.direction(c,q, i) > 0) {
+            } else if (QuickHull.direction(c,q, i) > 0) {
                 s2.add(i);
             }
         }
 // recursion so that it can call it self two times
-            findhull(s1, p, c);
-            findhull(s2, c, q);
+            findHull(s1, p, c);
+            findHull(s2, c, q);
     }
 }

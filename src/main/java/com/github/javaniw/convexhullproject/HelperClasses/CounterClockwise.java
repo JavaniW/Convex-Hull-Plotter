@@ -1,5 +1,7 @@
 package com.github.javaniw.convexhullproject.HelperClasses;
 
+import com.github.javaniw.convexhullproject.QuickHullAlgorithm.Point;
+
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -28,8 +30,22 @@ public class CounterClockwise {
     }
 
     /**
+     * Returns a reordered list of Point objects in counterclockwise order
      *
-     * Returns a reordered list of points in counterclockwise
+     * @param points a list of Point objects
+     * @return a list of Points objects sorted counterclockwise
+     */
+    public static List<Point> orderPoints(List<Point> points) {
+//        converts the list of Points to a list of Doubles
+        List<Double[]> pointsInDoubleFormat = PointListConversion.pointListToDoubleList(points);
+//        uses the order() method to reorder the list of doubles and then converts them back to
+//        a list of Point objects and returns the new list
+        return PointListConversion.doubleListToPointList(order(pointsInDoubleFormat));
+    }
+
+    /**
+     *
+     * Returns a reordered list of points in counterclockwise order
      *
      * @param points a list of points (x, y)
      * @return a list points ordered in counterclockwise according to the center of the points

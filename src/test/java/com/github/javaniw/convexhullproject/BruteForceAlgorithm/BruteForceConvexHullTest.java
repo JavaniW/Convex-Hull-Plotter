@@ -1,26 +1,29 @@
-import com.github.javaniw.convexhullproject.BruteForceAlgo.BruteForceConvexHull;
+package com.github.javaniw.convexhullproject.BruteForceAlgorithm;
+
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 class BruteForceConvexHullTest {
 
-
-//    @Test
+    @Test
     void findConvexHull() {
-/**
- * Test Points:
- * (1, 1)
- * (1, 6)
- * (2, 2)
- * (2, 4)
- * (3, 2)
- * (3, 3)
- * (3, 5)
- * (3, 7)
- * (4, 4)
- * (4, 6)
- */
+        /**
+         * Test Points:
+         * (1, 1)
+         * (1, 6)
+         * (2, 2)
+         * (2, 4)
+         * (3, 2)
+         * (3, 3)
+         * (3, 5)
+         * (3, 7)
+         * (4, 4)
+         * (4, 6)
+         */
 
         List<Double []> points = new ArrayList<>();
         points.add(new Double[]{1.0, 1.0});

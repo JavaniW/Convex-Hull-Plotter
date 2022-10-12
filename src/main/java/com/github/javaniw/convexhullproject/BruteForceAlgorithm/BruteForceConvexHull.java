@@ -1,4 +1,4 @@
-package com.github.javaniw.convexhullproject.BruteForceAlgo;
+package com.github.javaniw.convexhullproject.BruteForceAlgorithm;
 
 import com.github.javaniw.convexhullproject.ConvexHull.ConvexHull;
 import com.github.javaniw.convexhullproject.HelperClasses.CounterClockwise;
