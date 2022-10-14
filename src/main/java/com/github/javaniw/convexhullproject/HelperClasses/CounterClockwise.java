@@ -25,7 +25,6 @@ public class CounterClockwise {
         }
         Double centerPointX = x / points.size();
         Double centerPointY = y / points.size();
-        System.out.println("Center point: " + new Double[]{centerPointX, centerPointY});
         return new Double[]{centerPointX, centerPointY};
     }
 
