@@ -1,8 +1,6 @@
 package com.github.javaniw.convexhullproject;
 
 import com.github.javaniw.convexhullproject.BruteForceAlgorithm.BruteForceConvexHull;
-import com.github.javaniw.convexhullproject.HelperClasses.PointListConversion;
-import com.github.javaniw.convexhullproject.QuickHullAlgorithm.Point;
 import com.github.javaniw.convexhullproject.QuickHullAlgorithm.QuickHull;
 import javafx.event.EventHandler;
 import javafx.scene.chart.LineChart;
@@ -98,6 +96,10 @@ public class Controller {
         hbox.getChildren().set(2, plotButton);
     }
 
+    public static void changeButtonController() {
+
+    }
+
     /**
      * Uses the appropriate algorithm to determine and return the points which make up the convex hull
      *
@@ -112,9 +114,18 @@ public class Controller {
         }
 //        if algorithmType is "QuickHull," use the QuickHull algorithm to calculate the convex hull
         if (algorithmType == "QuickHull") {
-            List<Point> convexHull = QuickHull.quickHull(PointListConversion.doubleListToPointList(setOfPoints));
-            return PointListConversion.pointListToDoubleList(convexHull);
+            return QuickHull.findConvexHull(setOfPoints);
         }
+//        return
         return null;
+    }
+
+    public static EventHandler<MouseEvent> startController() {
+        EventHandler<MouseEvent> eventHandler = new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+
+            }
+        }
     }
 }

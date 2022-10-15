@@ -1,7 +1,12 @@
 package com.github.javaniw.convexhullproject;
 
+import com.github.javaniw.convexhullproject.BruteForceAlgorithm.BruteForceConvexHull;
 import com.github.javaniw.convexhullproject.ConvexHull.ConvexHull;
 import com.github.javaniw.convexhullproject.HelperClasses.GeneratePoints;
+import com.github.javaniw.convexhullproject.QuickHullAlgorithm.QuickHull;
+import com.github.javaniw.convexhullproject.views.AlgorithmSelectionView;
+import com.github.javaniw.convexhullproject.views.ChartDisplayView;
+import com.github.javaniw.convexhullproject.views.MenuRowView;
 import javafx.application.Application;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -26,6 +31,11 @@ import java.io.IOException;
 import java.util.List;
 
 public class QuickHullApplication extends Application {
+
+    public static AlgorithmSelectionView algorithmSelectionView;
+    public static ChartDisplayView chartDisplayView;
+    public static MenuRowView menuRowView;
+
     @Override
     public void start(Stage stage) throws IOException {
 
@@ -113,11 +123,11 @@ public class QuickHullApplication extends Application {
         BorderPane border = new BorderPane();
 //        border.setMinSize(600, 600);
         ChoiceBox<ConvexHull> choiceBox = createChoiceBox();
-        HBox hbox = createHBox();
-        LineChart lineChart = createLineChart();
+//        HBox hbox = createHBox();
+//        LineChart lineChart = createLineChart();
         BorderPane.setAlignment(choiceBox, Pos.BOTTOM_CENTER);
-        border.setCenter(lineChart);
-        border.setBottom(hbox);
+        border.setCenter(new ChartDisplayView());
+        border.setBottom(new MenuRowView());
         border.setTop(choiceBox);
         return border;
     }
@@ -129,8 +139,8 @@ public class QuickHullApplication extends Application {
      */
     public static ChoiceBox createChoiceBox() {
 //        creates ChoiceBox in which the user will use to select which algorithm they want to use
-        ChoiceBox<String> choiceBox= new ChoiceBox<>(FXCollections.observableArrayList(new String[]{"Brute Force", "QuickHull"}));
-        choiceBox.setValue("Brute Force");
+        ChoiceBox<ConvexHull> choiceBox= new ChoiceBox<>(FXCollections.observableArrayList(new BruteForceConvexHull(), new QuickHull()));
+        choiceBox.setValue(choiceBox.getItems().get(0));
         return  choiceBox;
     }
 
@@ -184,6 +194,12 @@ public class QuickHullApplication extends Application {
 //        adds Label, TextField, and two Buttons to HBox
         hbox.getChildren().addAll(label, textField, startButton, clearButton);
         return hbox;
+    }
+
+    public static void initializeViews() {
+        algorithmSelectionView = new AlgorithmSelectionView();
+        chartDisplayView = new ChartDisplayView();
+        menuRowView = new MenuRowView();
     }
 
     public static void main(String[] args) {

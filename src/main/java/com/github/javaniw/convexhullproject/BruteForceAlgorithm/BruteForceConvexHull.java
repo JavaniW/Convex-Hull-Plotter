@@ -6,7 +6,7 @@ import com.github.javaniw.convexhullproject.HelperClasses.CounterClockwise;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BruteForceConvexHull extends ConvexHull {
+public class BruteForceConvexHull implements ConvexHull {
 
     /**
      * Returns the convex hull of a convex set. The hull will be specified by the points that are connected
@@ -91,5 +91,10 @@ public class BruteForceConvexHull extends ConvexHull {
             return null;
 //        otherwise, return the list of points
         return CounterClockwise.order(convexHullPoints);
+    }
+
+    @Override
+    public String toString() {
+        return "Brute-Force";
     }
 }
