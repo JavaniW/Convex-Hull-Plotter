@@ -94,8 +94,8 @@ public class BruteForceConvexHull extends ConvexHull {
         return CounterClockwise.order(convexHullPoints);
     }
 
-//    @Override
-//    public String toString() {
-//        return "Brute-Force";
-//    }
+    @Override
+    public String toString() {
+        return "Brute-Force";
+    }
 }

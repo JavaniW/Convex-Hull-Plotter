@@ -13,6 +13,7 @@ public class QuickHull extends ConvexHull {
 
     @Override
     public List<Double[]> findConvexHull(List<Double[]> listOfPoints) {
+        convexHull.clear();
         if (listOfPoints.size() < 3) {
             return listOfPoints;
         }
@@ -23,7 +24,7 @@ public class QuickHull extends ConvexHull {
 
         // establishes the point A as the leftmost point in the list and B as the rightmost point in the list
         Double[] A = listOfPoints.get(0);
-        Double[] B = listOfPoints.get(1);
+        Double[] B = listOfPoints.get(listOfPoints.size() - 1);
 
         // adds points A and B to the convexHull list
         convexHull.add(A);

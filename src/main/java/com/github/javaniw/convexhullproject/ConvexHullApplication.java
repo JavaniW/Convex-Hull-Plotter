@@ -43,7 +43,6 @@ public class ConvexHullApplication extends Application {
     public static Controller controller;
     @Override
     public void start(Stage stage) throws IOException {
-
 //        creates a borderPane which will serve as main UI component
         BorderPane mainPane = initialize();
 
@@ -58,22 +57,31 @@ public class ConvexHullApplication extends Application {
         stage.setMinHeight(600);
         stage.setMaxHeight(600);
         stage.setMaxWidth(600);
+//        System.out.println("Here");
+
 //        shows the scene i.e., makes the scene visible
         stage.show();
+//        System.out.println("Here");
+
     }
 
 
     public BorderPane initialize() {
+
         BorderPane mainPane = new BorderPane();
+
         algorithmSelectionView = new AlgorithmSelectionView();
+
         chartDisplayView = new ChartDisplayView();
+
         menuRowView = new MenuRowView();
         model = new Model();
         controller = new Controller(this);
-        BorderPane.setAlignment(algorithmSelectionView, Pos.BOTTOM_CENTER);
         mainPane.setTop(algorithmSelectionView);
         mainPane.setCenter(chartDisplayView);
         mainPane.setBottom(menuRowView);
+        BorderPane.setAlignment(algorithmSelectionView, Pos.BOTTOM_CENTER);
+//        System.out.println("Here");
         return mainPane;
     }
 

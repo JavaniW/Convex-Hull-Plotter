@@ -6,6 +6,10 @@ import java.util.List;
 
 public class Model {
 
+    public Model() {
+        state = new State();
+    }
+
     public State state;
 
     public class State {

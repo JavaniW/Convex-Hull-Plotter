@@ -10,7 +10,7 @@ public class AlgorithmSelectionView extends ChoiceBox {
 
     public AlgorithmSelectionView() {
 //        creates ChoiceBox in which the user will use to select which algorithm they want to use
-        ChoiceBox<ConvexHull> choiceBox= new ChoiceBox<>(FXCollections.observableArrayList(new BruteForceConvexHull(), new QuickHull()));
+        super(FXCollections.observableArrayList(new BruteForceConvexHull(), new QuickHull()));
         setValue(getItems().get(0));
     }
 }
