@@ -67,7 +67,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.github.javaniw.convexhullproject/com.github.javaniw.convexhullproject.QuickHullApplication
+                                com.github.javaniw.convexhullproject/com.github.javaniw.convexhullproject.ConvexHullApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

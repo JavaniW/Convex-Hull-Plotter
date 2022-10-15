@@ -6,6 +6,8 @@ module com.github.javaniw.convexhullproject {
 
     opens com.github.javaniw.convexhullproject to javafx.fxml;
     exports com.github.javaniw.convexhullproject;
-    exports com.github.javaniw.convexhullproject.ConvexHull;
-    opens com.github.javaniw.convexhullproject.ConvexHull to javafx.fxml;
+//    exports com.github.javaniw.convexhullproject.ConvexHull;
+//    opens com.github.javaniw.convexhullproject.ConvexHull to javafx.fxml;
+    exports com.github.javaniw.convexhullproject.model;
+    opens com.github.javaniw.convexhullproject.model to javafx.fxml;
 }

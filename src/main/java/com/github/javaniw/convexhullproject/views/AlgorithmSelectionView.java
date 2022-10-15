@@ -1,8 +1,8 @@
 package com.github.javaniw.convexhullproject.views;
 
-import com.github.javaniw.convexhullproject.BruteForceAlgorithm.BruteForceConvexHull;
-import com.github.javaniw.convexhullproject.ConvexHull.ConvexHull;
-import com.github.javaniw.convexhullproject.QuickHullAlgorithm.QuickHull;
+import com.github.javaniw.convexhullproject.model.BruteForceConvexHull;
+import com.github.javaniw.convexhullproject.model.ConvexHull;
+import com.github.javaniw.convexhullproject.model.QuickHull;
 import javafx.collections.FXCollections;
 import javafx.scene.control.ChoiceBox;
 

@@ -1,6 +1,5 @@
-package com.github.javaniw.convexhullproject.QuickHullAlgorithm;
+package com.github.javaniw.convexhullproject.model;
 
-import com.github.javaniw.convexhullproject.ConvexHull.ConvexHull;
 import com.github.javaniw.convexhullproject.HelperClasses.CounterClockwise;
 import com.github.javaniw.convexhullproject.HelperClasses.PointComparative;
 
@@ -8,11 +7,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class QuickHull implements ConvexHull {
+public class QuickHull extends ConvexHull {
     // static so it can be cleared and called upon in other classes
     static private List<Double[]> convexHull = new ArrayList<>();
 
-    public static List<Double[]> findConvexHull(List<Double[]> listOfPoints) {
+    @Override
+    public List<Double[]> findConvexHull(List<Double[]> listOfPoints) {
         if (listOfPoints.size() < 3) {
             return listOfPoints;
         }

@@ -1,12 +1,11 @@
-package com.github.javaniw.convexhullproject.BruteForceAlgorithm;
+package com.github.javaniw.convexhullproject.model;
 
-import com.github.javaniw.convexhullproject.ConvexHull.ConvexHull;
 import com.github.javaniw.convexhullproject.HelperClasses.CounterClockwise;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class BruteForceConvexHull implements ConvexHull {
+public class BruteForceConvexHull extends ConvexHull {
 
     /**
      * Returns the convex hull of a convex set. The hull will be specified by the points that are connected
@@ -15,7 +14,9 @@ public class BruteForceConvexHull implements ConvexHull {
      * @param listOfPoints a list of points in the graph (x coordinate, y coordinate)
      * @return a list of points of the convex hull in counterclockwise order
      */
-    public static List<Double []> findConvexHull(List<Double[]> listOfPoints) {
+
+    @Override
+    public List<Double []> findConvexHull(List<Double[]> listOfPoints) {
         if (listOfPoints.size() <= 3) {
             return listOfPoints;
         }
@@ -93,8 +94,8 @@ public class BruteForceConvexHull implements ConvexHull {
         return CounterClockwise.order(convexHullPoints);
     }
 
-    @Override
-    public String toString() {
-        return "Brute-Force";
-    }
+//    @Override
+//    public String toString() {
+//        return "Brute-Force";
+//    }
 }

@@ -1,6 +1,7 @@
 package com.github.javaniw.convexhullproject.QuickHullAlgorithm;
 
 import com.github.javaniw.convexhullproject.HelperClasses.PrintPoints;
+import com.github.javaniw.convexhullproject.model.QuickHull;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
